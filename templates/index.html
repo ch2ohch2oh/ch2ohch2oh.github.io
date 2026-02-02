@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<section class="intro">
+    {{ content | safe }}
+</section>
+
+<section class="posts">
+    <h2>Recent Posts</h2>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <span class="date">{{ post.date.strftime('%Y-%m-%d') if post.date.strftime is defined else post.date
+                }}</span>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
