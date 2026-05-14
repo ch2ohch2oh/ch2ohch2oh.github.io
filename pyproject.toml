@@ -1,0 +1,13 @@
+[project]
+name = "ch2ohch2oh-github-io"
+version = "0.1.0"
+description = "Static site generator for ch2ohch2oh.github.io"
+requires-python = ">=3.11"
+dependencies = [
+  "jinja2",
+  "markdown",
+  "python-frontmatter",
+]
+
+[tool.uv]
+package = false
